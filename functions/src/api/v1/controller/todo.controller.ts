@@ -1,5 +1,6 @@
 import {Joi} from "express-validation";
 import MainController from "./main.controller";
+import {collections} from "../../../config/db";
 
 
 interface ITodo {
@@ -23,7 +24,7 @@ export class Todo extends MainController<ITodo> {
    *
    */
   constructor() {
-    super("todos");
+    super(collections.todos);
   }
 }
 

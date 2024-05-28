@@ -1,6 +1,7 @@
-import * as functions from "firebase-functions";
+import {onRequest} from "firebase-functions/v2/https";
 import "./config/db";
 import app from "./app";
 
-export const api = functions.https.onRequest(app);
+export * from "./events";
+export const api = onRequest(app);
 
