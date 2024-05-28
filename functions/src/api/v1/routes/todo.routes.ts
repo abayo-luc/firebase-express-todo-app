@@ -10,6 +10,6 @@ router.post("/", validate(createTodoValidation,
   {keyByField: true}), controller.create);
 router.get("/:id", controller.getOne);
 router.put("/:id", controller.update);
-router.delete("/:id", controller.delete);
+router.delete("/:id", controller.softDelete);
 
 export default router;

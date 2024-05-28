@@ -1,1 +1,1 @@
-export * from "./todo.events";
+export {onTodoCreate} from "../models/todo.model";
