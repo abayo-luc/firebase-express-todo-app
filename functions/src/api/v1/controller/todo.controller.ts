@@ -12,17 +12,12 @@ interface ITodo {
 export const createTodoValidation = {
   body: Joi.object({
     description: Joi.string().required(),
-    isCompleted: Joi.boolean().optional().default(false),
-    deadline: Joi.date(),
+    isCompleted: Joi.boolean().optional(),
+    deadline: Joi.date().required(),
   }),
 };
-/**
- *
- */
+
 export class Todo extends MainController<ITodo> {
-  /**
-   *
-   */
   constructor() {
     super(collections.todos);
   }
